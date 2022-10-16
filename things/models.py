@@ -1,3 +1,12 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
-# Create your models here.
+# name: a short string that identifies a thing.
+# description: a slightly longer string that describes a thing.
+# quantity: an integer that identifies the number of items of a thing we possess.
+
+class User(AbstractUser):
+
+    name = models.TextField()
+    description = models.TextField()
+    quantity = models.TextField()
