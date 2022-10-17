@@ -10,3 +10,5 @@ class Thing(AbstractUser):
     name = models.TextField()
     description = models.TextField()
     quantity = models.TextField()
+
+    #test
