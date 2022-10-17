@@ -1,3 +1,4 @@
+from enum import unique
 from django.db import models
 #from django.contrib.auth.models import AbstractUser
 
@@ -5,10 +6,10 @@ from django.db import models
 # description: a slightly longer string that describes a thing.
 # quantity: an integer that identifies the number of items of a thing we possess.
 
-class Thing(django.db.models.Model):
+class Thing(models.Model):
 
-    name = models.TextField()
-    description = models.TextField()
-    quantity = models.TextField()
+    name = models.CharField(unique=True, blank=False, max_length= 30)
+    description = models.CharField(unique=False, blank=True, max_length= 120)
+    quantity = models.IntegerField(unique=False)
 
     #test
